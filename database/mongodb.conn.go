@@ -2,43 +2,31 @@ package database
 
 import (
 	"context"
-	"fmt"
-	"time"
+	"os"
 
+	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
 var (
-	usr      = "christian"
-	pwd      = "123"
-	host     = "localhost"
-	port     = 27017
 	database = "mongodb-go"
 )
 
 func Connection() (*mongo.Client, error) {
-	uri := fmt.Sprintf("mongodb://%s:%s@%s:%d", usr, pwd, host, port)
-	client, err := mongo.NewClient(options.Client().ApplyURI(uri))
+	err := godotenv.Load()
 	if err != nil {
-		return nil, err
+		panic(err)
 	}
-	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
-
-	err = client.Connect(ctx)
+	uri := os.Getenv("MONGODB_URI")
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 	if err != nil {
-		return nil, err
+		panic(err)
 	}
-	rd, _ := readpref.New(1)
-	err = client.Ping(ctx, rd)
-	if err != nil {
-		return nil, err
-	}
-	return nil, nil
+	return client, nil
 }
 
-func GetCollection(collection string) mongo.Collection {
+func GetCollection(collection string) *mongo.Collection {
 	client, _ := Connection()
-	return *client.Database(database).Collection(collection)
+	return client.Database(database).Collection(collection)
 }

@@ -1,13 +1,14 @@
 package user_service_test
 
 import (
-	userService "mongodb-go/services/user.service"
 	"testing"
 	"time"
 
+	userService "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/services/user.service"
+
 	"go.mongodb.org/mongo-driver/bson/primitive"
 
-	m "mongodb-go/models"
+	m "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/models"
 )
 
 var userId string
