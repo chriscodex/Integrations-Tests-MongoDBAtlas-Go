@@ -16,7 +16,6 @@ var userId string
 func TestCreate(t *testing.T) {
 	oid := primitive.NewObjectID()
 	userId = oid.Hex()
-
 	user := m.User{
 		ID:        oid,
 		Name:      "Christian",
@@ -24,9 +23,7 @@ func TestCreate(t *testing.T) {
 		CreatedAt: time.Now(),
 		UpdatedAt: time.Now(),
 	}
-
 	err := userService.Create(user)
-
 	if err != nil {
 		t.Error("User creation test failed")
 		t.Fail()

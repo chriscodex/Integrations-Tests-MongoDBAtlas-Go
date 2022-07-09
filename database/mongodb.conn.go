@@ -10,8 +10,11 @@ import (
 )
 
 var (
-	database = "mongodb-go"
-	uri      = ""
+	// Add the uri of your cluster of MongoDBAtlas
+	// https://www.mongodb.com/docs/drivers/go/current/quick-start/#connect-to-your-cluster
+	uri = ""
+	// Add the name of your database
+	database = ""
 )
 
 func Connection() (*mongo.Client, error) {

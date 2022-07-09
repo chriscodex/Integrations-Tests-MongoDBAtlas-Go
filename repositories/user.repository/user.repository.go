@@ -11,7 +11,9 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
+// Name of collection
 var collection = database.GetCollection("users")
+
 var ctx = context.Background()
 
 func Create(user m.User) error {
