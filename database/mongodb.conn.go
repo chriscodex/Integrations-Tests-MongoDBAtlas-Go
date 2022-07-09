@@ -2,26 +2,28 @@ package database
 
 import (
 	"context"
-	"os"
+	"time"
 
-	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
+	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
 var (
 	database = "mongodb-go"
+	uri      = ""
 )
 
 func Connection() (*mongo.Client, error) {
-	err := godotenv.Load()
-	if err != nil {
-		panic(err)
-	}
-	uri := os.Getenv("MONGODB_URI")
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 	if err != nil {
-		panic(err)
+		return nil, err
+	}
+	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
+	rd, _ := readpref.New(1)
+	err = client.Ping(ctx, rd)
+	if err != nil {
+		return nil, err
 	}
 	return client, nil
 }
