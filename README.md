@@ -1,5 +1,5 @@
-# Integration Tests to MongoDBAtlas with Go
-This repository can help you integrate a MongoDBAtlas cluster database into your Go application and test the operations of creating, reading, updating, and deleting documents from a collection.  
+# Integration Tests to MongoDBAtlas with Go ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/ChrisCodeX/CRUD-MongoDBAtlas-Go) ![](https://camo.githubusercontent.com/3084f133857f6d0a29d410e59ba39f6906b0f2e32b24082d1e95710196984db6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4d6f6e676f44422d3444423333443f7374796c653d666c6174266c6f676f3d6d6f6e676f6462266c6f676f436f6c6f723d464646464646)
+This repository can help you to integrate a MongoDBAtlas cluster database into your Go application and test the operations of creating, reading, updating, and deleting documents from a collection.  
 
 ---
 
@@ -39,7 +39,3 @@ By default it will create the "users" collection, if you want to change the coll
 // Name of collection
 var collection = database.GetCollection("users")
 ```
-
----
-
-### Built with 🛠️
