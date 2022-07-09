@@ -1,9 +1,9 @@
 package user_service
 
 import (
-	userRepository "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/repositories/user.repository"
+	userRepository "github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/repositories/user.repository"
 
-	m "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/models"
+	m "github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/models"
 )
 
 func Create(user m.User) error {

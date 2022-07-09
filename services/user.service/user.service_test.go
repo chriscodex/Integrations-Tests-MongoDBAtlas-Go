@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	userService "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/services/user.service"
+	userService "github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/services/user.service"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 
-	m "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/models"
+	m "github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/models"
 )
 
 var userId string

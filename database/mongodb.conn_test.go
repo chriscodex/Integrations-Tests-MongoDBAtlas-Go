@@ -3,7 +3,7 @@ package database_test
 import (
 	"testing"
 
-	database "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/database"
+	database "github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/database"
 )
 
 func TestConnection(t *testing.T) {

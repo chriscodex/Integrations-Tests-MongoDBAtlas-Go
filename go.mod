@@ -1,4 +1,4 @@
-module github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go
+module github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go
 
 go 1.17
 

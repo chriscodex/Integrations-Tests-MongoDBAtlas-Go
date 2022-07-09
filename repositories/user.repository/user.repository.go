@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/database"
-	m "github.com/ChrisCodeX/CRUD-MongoDBAtlas-Go/models"
+	"github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/database"
+	m "github.com/ChrisCodeX/Integrations-Tests-MongoDBAtlas-Go/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
