@@ -5,6 +5,13 @@ This repository can help you to integrate a MongoDBAtlas cluster database into y
 
 ---
 
+## **Table of Contents** 📖  
+1. [Pre-Requirements](#pre-requirements-)
+2. [Installation](#installation-)
+3. [Run Tests](#run-tests-%EF%B8%8F)
+
+---
+
 ### Pre-Requirements 📋  
 Have access to a MongoDBAtlas cluster.  
 In this link you have a guide on how to create it: https://www.mongodb.com/docs/atlas/tutorial/create-new-cluster/  
@@ -29,7 +36,7 @@ var (
 
 ---
 
-### Running Tests ⚙️
+### Run Tests ⚙️
 To run the test, type this command:
 ```
 go test
