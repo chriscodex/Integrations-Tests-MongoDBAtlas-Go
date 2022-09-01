@@ -18,7 +18,7 @@ In this link you have a guide on how to create it: https://www.mongodb.com/docs/
 
 ---  
 
-### Instalation 🔧  
+### Installation 🔧  
 - Install the MongoDB driver as a dependency  
 ```
 go get go.mongodb.org/mongo-driver/mongo  
